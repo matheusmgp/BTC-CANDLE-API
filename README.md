@@ -28,7 +28,7 @@ git clone https://github.com/matheusmgp/BTC-CANDLE-API.git
 npm i
 
 ## execute the project(dont forget to install mongo and rabbitmq  in your local PC or use docker container)
-npm start
+npm run start:local
 ```
 
 ## Author
