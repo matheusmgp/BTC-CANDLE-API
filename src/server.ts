@@ -1,33 +1,3 @@
-/*import "./util/module-alias";
-import { config } from "dotenv";
-import { app } from "./app";
-import { connect, close } from "./config/db";
-import { CandleMessageChannel } from "./messages/candle-messages-channel";
-import CandleRepository from "./repositories/candle.repository";
-
-config();
-
-const createServer = async () => {
-  const PORT = process.env.PORT;
-
-  await connect();
-  const server = app.listen(PORT, () => {
-    console.info(`Application running on port ${PORT}`);
-  });
-
-  const candleMsgChannel = new CandleMessageChannel(
-    server,
-    new CandleRepository()
-  );
-  await candleMsgChannel.messageConsumer();
-
-  process.on("SIGNT", async () => {
-    await close();
-    console.info("Connection and server shutted");
-  });
-};
-
-createServer();*/
 import "./util/module-alias";
 import express, { Application } from "express";
 import { router } from "./routes";

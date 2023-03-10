@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc",
     "start": "npm run build && node dist/src/app.js",
-    "start:local": "ts-node --transpile-only src/app.ts"
+    "start:local": "nodemon --transpile-only src/app.ts"
   },
   "keywords": [],
   "author": "",

@@ -36,7 +36,7 @@ export class CandleMessageChannel {
         const candle: CandleModel = JSON.parse(msg.content.toString());
         this.channel.ack(msg);
         await this.repo.save(candle);
-        this._io.emit(process.env.SOCKET_EVVENT_NAME ?? "newCandle", candle);
+        this._io.emit("newCandle", candle);
       }
     });
   }
